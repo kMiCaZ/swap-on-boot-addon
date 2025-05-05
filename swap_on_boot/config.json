@@ -1,6 +1,6 @@
 {
   "name": "Swap on Boot",
-  "version": "1.0",
+  "version": "1.1",
   "slug": "swap_on_boot",
   "description": "Augmente la taille du swap au démarrage",
   "startup": "services",
