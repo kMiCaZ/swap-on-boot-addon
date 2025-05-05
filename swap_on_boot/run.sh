@@ -14,6 +14,6 @@ fi
 swapon $SWAPFILE
 
 echo "==> Swap activé :"
-free -h
+swapon --show
 
 tail -f /dev/null
