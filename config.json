@@ -1,0 +1,15 @@
+{
+  "name": "Swap on Boot",
+  "version": "1.0",
+  "slug": "swap_on_boot",
+  "description": "Augmente la taille du swap au démarrage",
+  "startup": "services",
+  "boot": "auto",
+  "hassio_api": false,
+  "hassio_role": "default",
+  "host_network": true,
+  "privileged": ["SYS_ADMIN"],
+  "arch": ["aarch64", "armv7"],
+  "options": {},
+  "schema": {}
+}
