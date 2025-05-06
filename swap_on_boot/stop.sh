@@ -2,5 +2,7 @@
 
 SWAPFILE="/data/swapfile"
 
-echo "==> Désactivation du swap..."
-swapoff $SWAPFILE || echo "Swap déjà désactivé ou erreur."
+echo "==> Désactivation du swap au stop..."
+swapoff "$SWAPFILE" 2>/dev/null || echo "Impossible de désactiver le swap."
+
+exit 0

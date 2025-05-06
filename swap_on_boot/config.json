@@ -1,6 +1,6 @@
 {
   "name": "Swap on Boot",
-  "version": "1.1",
+  "version": "1.2",
   "slug": "swap_on_boot",
   "description": "Augmente la taille du swap au démarrage",
   "startup": "services",
@@ -11,5 +11,6 @@
   "privileged": ["SYS_ADMIN"],
   "arch": ["aarch64", "armv7"],
   "options": {},
-  "schema": {}
+  "schema": {},
+  "stop": "stop.sh"
 }
