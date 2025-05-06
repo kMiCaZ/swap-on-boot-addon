@@ -22,7 +22,7 @@ fi
 swapon $SWAPFILE
 
 echo "==> Swap activé :"
-free -h
+swapon  --show
 
 # L'addon tourne en continu pour ne pas être tué immédiatement
 tail -f /dev/null
