@@ -7,5 +7,7 @@ RUN apt-get update \
 
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
+COPY stop.sh /stop.sh
+RUN chmod +x /stop.sh
 
 CMD [ "/run.sh" ]
