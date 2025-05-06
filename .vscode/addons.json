@@ -1,0 +1,13 @@
+{
+    "addons": [
+      {
+        "name": "Swap on Boot",
+        "slug": "swap_on_boot",
+        "description": "Augmente la taille du swap au démarrage",
+        "repository": "https://github.com/kMiCaZ/hassio-addons",
+        "url": "https://github.com/kMiCaZ/hassio-addons/tree/main/swap-on-boot",
+        "maintainer": "kMiCaZ <ton@email.com>"
+      }
+    ]
+  }
+  
