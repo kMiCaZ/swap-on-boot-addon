@@ -2,21 +2,25 @@
 
 SWAPFILE="/data/swapfile"
 
-echo "==> Désactivation du swap existant..."
+log() {
+  echo "$(date '+%Y-%m-%d %H:%M:%S') - $1"
+}
+
+log "==> Désactivation du swap existant..."
 swapoff "$SWAPFILE" 2>/dev/null
 
 if [ ! -f "$SWAPFILE" ]; then
-  echo "==> Création du fichier swap..."
+  log "==> Création du fichier swap..."
   dd if=/dev/zero of=$SWAPFILE bs=1M count=2048
   chmod 600 "$SWAPFILE"
   mkswap "$SWAPFILE"
 else
-  echo "==> Fichier swap déjà présent."
+  log "==> Fichier swap déjà présent."
 fi
 
 swapon "$SWAPFILE"
 
-echo "==> Swap activé :"
-free -h
+log "==> Swap activé :"
+swapon --show
 
 tail -f /dev/null
